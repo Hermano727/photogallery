@@ -8,7 +8,7 @@ import { initializeApp } from "firebase/app";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyD2pjRJejdYTxrueu5tUYlQ891nhHjU4NM",
+  apiKey: process.env.REACT_APP_FIREBASE_API_KEY,
   authDomain: "photogram-ef8c6.firebaseapp.com",
   projectId: "photogram-ef8c6",
   storageBucket: "photogram-ef8c6.firebasestorage.app",
