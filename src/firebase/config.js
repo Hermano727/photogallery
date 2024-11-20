@@ -1,10 +1,7 @@
-// Import the functions you need from the SDKs you need
-import * as firebase from "firebase/app"; 
-import 'firebase/storage';
-import 'firebase/serverstore';
+// Import the functions you need from the SDKs
 import { initializeApp } from "firebase/app";
-// TODO: Add SDKs for Firebase products that you want to use
-// https://firebase.google.com/docs/web/setup#available-libraries
+import { getStorage } from "firebase/storage";
+import { getFirestore, serverTimestamp } from "firebase/firestore";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
@@ -13,14 +10,15 @@ const firebaseConfig = {
   projectId: "photogram-ef8c6",
   storageBucket: "photogram-ef8c6.firebasestorage.app",
   messagingSenderId: "712516580503",
-  appId: "1:712516580503:web:f2bfb957d5bc2b953f65d2"
+  appId: "1:712516580503:web:f2bfb957d5bc2b953f65d2",
 };
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 
-const imageStorage = firebase.storage();
+// Initialize services
+const imageStorage = getStorage(app);
+const imageFirestore = getFirestore(app);
 
-const imageFirestore = firebase.firestore();
-
-export {imageStorage, imageFirestore};
+// Export services and utility functions
+export { imageStorage, imageFirestore, serverTimestamp };
