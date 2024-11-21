@@ -22,3 +22,4 @@ const imageFirestore = getFirestore(app);
 
 // Export services and utility functions
 export { imageStorage, imageFirestore, serverTimestamp };
+  
