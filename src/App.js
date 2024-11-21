@@ -2,6 +2,7 @@ import React from 'react';
 import Title from './components/Title';
 import UploadForm from './components/UploadForm';
 import ImageGrid from './components/ImageGrid';
+import Modal from './components/modal';
 
 
 function App() {
@@ -10,6 +11,7 @@ function App() {
       <Title/>
       <UploadForm />
       <ImageGrid />
+      <Modal />
     </div>
   );
 }
